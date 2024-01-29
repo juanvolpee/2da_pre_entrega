@@ -87,3 +87,23 @@ class ProductManager {
 }
 
 module.exports = ProductManager;
+
+
+
+
+//prueba
+const filePath = 'productos.json';
+
+// Crea una instancia de ProductManager con la ruta del archivo
+const productManager = new ProductManager(filePath);
+
+
+productManager.addProduct('producto prueba', 'Este es un producto prueba', 200, 'Sin imagen', 'abc123', 25);
+
+const allProducts = productManager.getProducts();
+console.log(allProducts);
+
+const productIdToSearch = 1;
+const productById = productManager.getProductById(productIdToSearch);
+console.log(productById);
+
